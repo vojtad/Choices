@@ -255,7 +255,7 @@ class Choices {
           disabled: option.disabled || option.parentNode.disabled,
           placeholder:
             option.value === '' || option.hasAttribute('placeholder'),
-          customProperties: option.dataset['custom-properties'],
+          customProperties: JSON.parse(option.dataset['custom-properties']),
         });
       });
     }
